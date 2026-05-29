@@ -1,16 +1,88 @@
-# React + Vite
+# Chemical Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite app for logging chemical solutions, tracking concentration and stability metrics, and exporting solution logs as CSV.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Add new chemical solutions with name, category, concentration, volume, pH, temperature, and viscosity
+- View logged solutions in a searchable table
+- Delete individual solution entries
+- Visualize data with charts (bar, line, pie) using `recharts`
+- Persist solution data locally using `localStorage`
+- Export the current solution log as a CSV file
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite
+- Tailwind CSS
+- Recharts
+- ESLint
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run the development server
+
+```bash
+npm run dev
+```
+
+Open the URL shown in your terminal, typically `http://localhost:5173`.
+
+### Build for production
+
+```bash
+npm run build
+```
+
+### Preview the production build
+
+```bash
+npm run preview
+```
+
+## App Usage
+
+1. Enter solution details in the form.
+2. Click **Log Solution** to add it to the dashboard.
+3. Use the search box to filter solutions by name.
+4. Click **Delete** to remove an entry.
+5. Click **Export CSV** to download the current log as a CSV file.
+
+## Important Notes
+
+- Data is saved in the browser using `localStorage`, so refreshing the page preserves your log.
+- CSV export only runs when the **Export CSV** button is clicked.
+- Optional fields like pH, temperature, and viscosity accept blank values and will be saved as `N/A` if not provided.
+
+## Project Structure
+
+- `src/App.jsx` — app root and state management
+- `src/components/Dashboard.jsx` — dashboard layout and export button
+- `src/components/AddSolutionForm.jsx` — form for creating new solution records
+- `src/components/SolutionTable.jsx` — searchable solution list with delete actions
+- `src/components/ChartsWidget.jsx` — solution visualizations and metrics
+
+## Dependencies
+
+- `react`
+- `react-dom`
+- `recharts`
+
+## Dev Dependencies
+
+- `@vitejs/plugin-react`
+- `tailwindcss`
+- `eslint`
+- `vite`
+- `vitest`
+
+## License
+
+This project is provided as-is.
