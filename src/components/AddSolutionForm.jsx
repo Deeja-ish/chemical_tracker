@@ -51,7 +51,7 @@ function AddSolutionForm ({onAdd}) {
                     <div className='grid grid-cols-2 gap-2'>
                         <div>
                             <label className="block text-sm font-medium text-gray-700">Conc mol/L</label>
-                            <input type="number" value={formData.concentartion} placeholder='e.g 0.5' step={0.01} onChange={handleChange} required name='concentration' className='p-2 border border-white/20 rounded-lg bg-white/80 w-full mt-1 focus:ring-2 focus:ring-cyan-500 outline-none' />
+                            <input type="number" value={formData.concentration} placeholder='e.g 0.5' step={0.01} onChange={handleChange} required name='concentration' className='p-2 border border-white/20 rounded-lg bg-white/80 w-full mt-1 focus:ring-2 focus:ring-cyan-500 outline-none' />
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-gray-700">Vol (ml)</label>
